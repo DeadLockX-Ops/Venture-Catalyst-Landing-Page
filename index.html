@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <title>Venture Catalyst - IIT Bombay</title>
 <style>
     body {
@@ -504,6 +507,430 @@
         color: white;
     }
 </style>
+
+<!-- About Section (Intro of Venture Catalyst)-->
+
+    <section class="container">
+        <!-- Left Section -->
+        <div class="text-section">
+            <h2>About <span class="highlight">Venture Catalyst</span></h2>
+            <p>
+                Venture Catalyst is the dynamic entrepreneurship cell at IIT Bombay, dedicated to nurturing the next generation of innovators and startup founders. We bridge the gap between groundbreaking ideas and successful ventures.
+            </p>
+            <p>
+                In collaboration with IIT Bombay's renowned E-Cell, we provide a comprehensive ecosystem for aspiring entrepreneurs. From ideation to market launch, our programs are designed to accelerate your entrepreneurial journey.
+            </p>
+            <p>
+                Our mission is to create a thriving startup culture that transforms innovative concepts into companies that make a meaningful impact on society and the economy.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <span class="dot"></span>
+                    <div>
+                        <h4>Expert Mentorship</h4>
+                        <p>Connect with industry leaders and successful entrepreneurs</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="dot"></span>
+                    <div>
+                        <h4>Funding Support</h4>
+                        <p>Access to investors and funding opportunities</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="dot"></span>
+                    <div>
+                        <h4>Network Building</h4>
+                        <p>Join a community of like-minded innovators</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="dot"></span>
+                    <div>
+                        <h4>Resource Access</h4>
+                        <p>State-of-the-art facilities and tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="image-section">
+            <img src="idea image.jpg" alt="Venture Catalyst Graphic">
+            <div class="badge red-badge">
+                <strong>200+</strong>
+                <span>Active Members</span>
+            </div>
+            <div class="badge white-badge">
+                <strong>50+</strong>
+                <span>Startups Launched</span>
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        color: #333;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 3rem;
+        align-items: flex-start;
+    }
+
+    .text-section {
+        flex: 1 1 45%;
+        max-width: 600px;
+    }
+
+    .text-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    .highlight {
+        color: #0c1f49;
+    }
+
+    .text-section p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 50%;
+        margin-top: 6px;
+    }
+
+    .feature h4 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .feature p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .image-section {
+        position: relative;
+        flex: 1 1 45%;
+    }
+
+    .image-section img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .badge {
+        position: absolute;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .red-badge {
+        background: #e63946;
+        color: #fff;
+        top: 10px;
+        right: 10px;
+    }
+
+    .white-badge {
+        background: #fff;
+        color: #333;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .badge strong {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+</style>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".badge strong");
+    counters.forEach(counter => {
+        let target = parseInt(counter.innerText);
+        let count = 0;
+        let step = target / 50;
+
+        const updateCount = () => {
+            count += step;
+            if (count < target) {
+                counter.innerText = Math.ceil(count) + "+";
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target + "+";
+            }
+        };
+        updateCount();
+    });
+});
+
+
+</script>
+
+<!-- Programs Section -->
+
+<section class="programs-section">
+        <h2 class="section-title">Programs & Activities</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+            Comprehensive programs designed to nurture entrepreneurial minds and transform innovative ideas into successful ventures.
+        </p>
+
+        <div class="programs-grid">
+
+            <div class="program-card">
+                <i class="fa-regular fa-lightbulb icon"></i>
+                <h3>Innovation Workshops</h3>
+                <p>Hands-on sessions covering ideation, market research, and product development methodologies.</p>
+                <ul>
+                    <li>Design Thinking</li>
+                    <li>Market Validation</li>
+                    <li>Prototype Building</li>
+                </ul>
+            </div>
+
+            <div class="program-card">
+                <i class="fa-solid fa-rocket icon"></i>
+                <h3>Startup Incubator</h3>
+                <p>Comprehensive 6-month program to accelerate your startup from concept to market-ready product.</p>
+                <ul>
+                    <li>Seed Funding</li>
+                    <li>Office Space</li>
+                    <li>Legal Support</li>
+                </ul>
+            </div>
+
+            <div class="program-card">
+                <i class="fa-regular fa-user-group icon"></i>
+                <h3>Hackathons</h3>
+                <p>48–72 hour intensive coding and building events focused on solving real-world problems.</p>
+                <ul>
+                    <li>Cash Prizes</li>
+                    <li>Industry Mentors</li>
+                    <li>Networking</li>
+                </ul>
+            </div>
+
+            <div class="program-card">
+                <i class="fa-regular fa-book-open icon"></i>
+                <h3>Mentorship Program</h3>
+                <p>One-on-one guidance from successful entrepreneurs and industry experts.</p>
+                <ul>
+                    <li>Personal Mentor</li>
+                    <li>Industry Guidance</li>
+                    <li>Career Advice</li>
+                </ul>
+            </div>
+
+            <div class="program-card">
+                <i class="fa-regular fa-award"></i>
+                <h3>Pitch Competitions</h3>
+                <p>Regular competitions to showcase your ideas to investors and win funding opportunities.</p>
+                <ul>
+                    <li>Angel Investors</li>
+                    <li>Seed Funding</li>
+                    <li>Exposure</li>
+                </ul>
+            </div>
+
+            <div class="program-card">
+                <i class="fa-regular fa-handshake icon"></i>
+                <h3>Industry Partnerships</h3>
+                <p>Collaborations with leading companies for internships, projects, and job placements.</p>
+                <ul>
+                    <li>Corporate Partners</li>
+                    <li>Internships</li>
+                    <li>Job Opportunities</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #f9f7f5;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    /* Section Styling */
+    .programs-section {
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #0c1f49;
+        margin-bottom: 0.3rem;
+    }
+
+    .title-underline {
+        width: 50px;
+        height: 3px;
+        background: #e63946;
+        margin: 0.5rem auto 1rem;
+        border-radius: 2px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        color: #555;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        line-height: 1.4;
+    }
+
+    /* Fixed 3-column grid */
+    .programs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Card Styling - Square Shape */
+    .program-card {
+        background: #fff;
+        border: 1px solid #e2e2e2;
+        border-radius: 12px;
+        padding: 1.5rem 1.2rem;
+        text-align: center;
+        height: 300px; /* fixed height for square shape */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    }
+
+    .program-card:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    /* Icon Styling */
+    .icon {
+        font-size: 2rem;
+        color: #e63946;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Bigger Heading */
+    .program-card h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #0c1f49;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Description */
+    .program-card p {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 0.8rem;
+        line-height: 1.4;
+    }
+
+    /* Larger, bolder list */
+    .program-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .program-card ul li {
+        font-size: 1rem;       /* larger */
+        font-weight: 600;      /* bolder */
+        color: #e63946;
+        margin-bottom: 0.35rem;
+        position: relative;
+        padding-left: 0.9rem;
+    }
+
+    .program-card ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #e63946;
+    }
+
+    /* Responsive: 2 columns on tablets */
+    @media (max-width: 992px) {
+        .programs-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Responsive: 1 column on mobile */
+    @media (max-width: 600px) {
+        .programs-grid {
+            grid-template-columns: 1fr;
+        }
+        .program-card {
+            height: auto; /* allow flexibility on small screens */
+        }
+    }
+
+
+
+
+
+</style>    
 
 </body>
 </html>
