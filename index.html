@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css">
 <title>Venture Catalyst - IIT Bombay</title>
 <style>
     body {
@@ -221,7 +224,7 @@
     <div class="logo">
         <span class="logo-box">VC</span>
         <div class="logo-text">
-            <h4>Venture Catalyst</h4>
+            <h4 style="color: #1d52c5;">Venture Catalyst</h4>
             <p>IIT Bombay</p>
         </div>
     </div>
@@ -256,7 +259,7 @@
     <div class="overlay"></div>
     <div class="hero-content">
         <h1><span class="blue-text">Venture</span> <span class="red-text">Catalyst</span></h1>
-        <h2>Igniting Ideas into Impact</h2>
+        <h2 style="color:white">Igniting Ideas into Impact</h2>
         <p>
             The premier entrepreneurship cell at IIT Bombay, fostering innovation 
             and transforming ideas into impactful startups through mentorship and incubation.
@@ -573,9 +576,9 @@
 
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     body {
@@ -590,6 +593,7 @@
         gap: 2rem;
         padding: 3rem;
         align-items: flex-start;
+        background-color: rgb(204, 204, 178);
     }
 
     .text-section {
@@ -687,8 +691,43 @@
     @media (max-width: 768px) {
         .container {
             flex-direction: column;
+            
         }
     }
+
+    @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    /* Make features fill the whole width */
+    .features {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    /* Make features fill the whole width */
+    .features {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+
+    /* Make badges even smaller on mobile */
+    .red-badge,
+    .white-badge {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .badge strong {
+        font-size: 0.9rem;
+    }
+}
+
 
 </style>
     
@@ -750,18 +789,18 @@
             </div>
 
             <div class="program-card">
-                <i class="fa-regular fa-user-group icon"></i>
+                <i class="fa-solid fa-laptop-code icon"></i>
                 <h3>Hackathons</h3>
                 <p>48–72 hour intensive coding and building events focused on solving real-world problems.</p>
                 <ul>
-                    <li>Cash Prizes</li>
+                    <li>Goodies</li>
                     <li>Industry Mentors</li>
                     <li>Networking</li>
                 </ul>
             </div>
 
             <div class="program-card">
-                <i class="fa-regular fa-book-open icon"></i>
+                <i class="fa-solid fa-book-open icon"></i>
                 <h3>Mentorship Program</h3>
                 <p>One-on-one guidance from successful entrepreneurs and industry experts.</p>
                 <ul>
@@ -772,7 +811,7 @@
             </div>
 
             <div class="program-card">
-                <i class="fa-regular fa-award"></i>
+                <i class="fa-solid fa-award icon"></i>
                 <h3>Pitch Competitions</h3>
                 <p>Regular competitions to showcase your ideas to investors and win funding opportunities.</p>
                 <ul>
@@ -801,7 +840,7 @@
 
     body {
         font-family: 'Poppins', sans-serif;
-        background: #f9f7f5;
+        background: #fff0e0;
         margin: 0;
         padding: 0;
         color: #333;
@@ -848,15 +887,22 @@
         background: #fff;
         border: 1px solid #e2e2e2;
         border-radius: 12px;
-        padding: 1.5rem 1.2rem;
+        padding: 1.4rem 1.2rem; /* more inner spacing */
         text-align: center;
-        height: 300px; /* fixed height for square shape */
+        aspect-ratio: 1 / 1; /* perfect square */
+        max-width: 370px; /* extended for more presence */
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         transition: transform 0.25s ease, box-shadow 0.25s ease;
         box-shadow: 0 2px 5px rgba(0,0,0,0.04);
-    }
+        border: orange solid 1px;
+        }
+
+
+
+
 
     .program-card:hover {
         transform: translateY(-4px) scale(1.03);
@@ -925,6 +971,8 @@
             height: auto; /* allow flexibility on small screens */
         }
     }
+
+
 
 
 
