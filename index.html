@@ -713,10 +713,10 @@
 
     /* Make features fill the whole width */
     .features {
-        grid-template-columns: 1fr; /* 1 column on mobile */
+        grid-template-columns: 1fr; 
     }
 
-    /* Make badges even smaller on mobile */
+
     .red-badge,
     .white-badge {
         padding: 0.25rem 0.5rem;
@@ -882,15 +882,15 @@
         gap: 1.5rem;
     }
 
-    /* Card Styling - Square Shape */
+
     .program-card {
         background: #fff;
         border: 1px solid #e2e2e2;
         border-radius: 12px;
-        padding: 1.4rem 1.2rem; /* more inner spacing */
+        padding: 1.4rem 1.2rem;
         text-align: center;
-        aspect-ratio: 1 / 1; /* perfect square */
-        max-width: 370px; /* extended for more presence */
+        aspect-ratio: 1 / 1; 
+        max-width: 370px; 
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -932,7 +932,7 @@
         line-height: 1.4;
     }
 
-    /* Larger, bolder list */
+
     .program-card ul {
         list-style: none;
         padding: 0;
@@ -940,8 +940,8 @@
     }
 
     .program-card ul li {
-        font-size: 1rem;       /* larger */
-        font-weight: 600;      /* bolder */
+        font-size: 1rem;      
+        font-weight: 600;     
         color: #e63946;
         margin-bottom: 0.35rem;
         position: relative;
@@ -949,11 +949,14 @@
     }
 
     .program-card ul li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #e63946;
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e63946;
+    font-size: 1.4rem; 
+    line-height: 1;
     }
+
 
     /* Responsive: 2 columns on tablets */
     @media (max-width: 992px) {
@@ -968,7 +971,7 @@
             grid-template-columns: 1fr;
         }
         .program-card {
-            height: auto; /* allow flexibility on small screens */
+            height: auto; 
         }
     }
 
